@@ -1,0 +1,250 @@
+.root {
+    -fx-font-family: "DengXian";
+}
+
+/*region top-bar*/
+.root > .top-bar {
+    -fx-pref-height: 2em;
+    -fx-padding: 1 1.5em 1 1.5em;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+
+    -fx-background-color: derive(rgb(211, 185, 172, 0.5), -10%), linear-gradient(to bottom, rgb(237, 228, 226, 0.7), rgb(209, 207, 210, 0.7));
+    -fx-background-insets: 0, 0 0 1 0;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 25, 0, 0, 0);
+}
+
+.root > .top-bar > .right {
+    -fx-spacing: 13;
+    -fx-alignment: center;
+}
+
+.root > .top-bar .svg {
+
+    -fx-background-color: black;
+
+    -s-width: 24;
+    -s-height: 24;
+
+    -fx-min-width: -s-width;
+    -fx-min-height: -s-height;
+    -fx-pref-width: -s-width;
+    -fx-pref-height: -s-height;
+    -fx-max-width: -s-width;
+    -fx-max-height: -s-height;
+}
+
+.root > .top-bar > .right > .battery {
+    -fx-content-display: right;
+    -fx-alignment: center;
+}
+
+.root > .top-bar > .right > .battery > .graphic.svg {
+    -fx-shape: "M984.2 434.8c-5-2.9-8.2-8.2-8.2-13.9v-99.3c0-53.6-43.9-97.5-97.5-97.5h-781C43.9 224 0 267.9 0 321.5v380.9C0 756.1 43.9 800 97.5 800h780.9c53.6 0 97.5-43.9 97.5-97.5v-99.3c0-5.8 3.2-11 8.2-13.9 23.8-13.9 39.8-39.7 39.8-69.2v-16c0.1-29.6-15.9-55.5-39.7-69.3zM912 702.5c0 12-6.2 19.9-9.9 23.6-3.7 3.7-11.7 9.9-23.6 9.9h-781c-11.9 0-19.9-6.2-23.6-9.9-3.7-3.7-9.9-11.7-9.9-23.6v-381c0-11.9 6.2-19.9 9.9-23.6 3.7-3.7 11.7-9.9 23.6-9.9h780.9c11.9 0 19.9 6.2 23.6 9.9 3.7 3.7 9.9 11.7 9.9 23.6v381z M736 344v336c0 8.8-7.2 16-16 16H112c-8.8 0-16-7.2-16-16V344c0-8.8 7.2-16 16-16h608c8.8 0 16 7.2 16 16z";
+
+    -s-width: 20;
+    -s-height: 11;
+}
+
+.root > .top-bar > .right > .wifi.svg {
+    -fx-shape: "M926.634667 294.912a32 32 0 1 1-39.936 50.005333C780.512 260.128 649.824 213.333333 512.053333 213.333333c-137.813333 0-268.544 46.826667-374.752 131.669334a32 32 0 1 1-39.936-50.005334C214.784 201.194667 359.562667 149.333333 512.053333 149.333333c152.437333 0 297.173333 51.818667 414.581334 145.578667z m-235.413334 298.133333a32 32 0 0 1-38.442666 51.178667A233.418667 233.418667 0 0 0 512.021333 597.333333c-51.541333 0-100.48 16.629333-140.8 46.912a32 32 0 1 1-38.442666-51.157333A297.408 297.408 0 0 1 512.021333 533.333333c65.504 0 127.893333 21.184 179.2 59.722667z m128-149.344a32 32 0 0 1-38.442666 51.168C703.829333 437.066667 610.378667 405.333333 512.032 405.333333c-98.368 0-191.850667 31.754667-268.8 89.578667a32 32 0 1 1-38.453333-51.157333C292.736 377.664 399.669333 341.333333 512.032 341.333333c112.32 0 219.242667 36.309333 307.189333 102.368zM512 853.333333a64 64 0 1 1 0-128 64 64 0 0 1 0 128z";
+
+    -s-width: 20;
+    -s-height: 16;
+}
+
+.root > .top-bar > .right > .bluetooth.svg {
+    -fx-shape: "M404.384 510.336l194.656-207.52a32 32 0 0 0-2.752-46.4l-220.224-184.896A32.032 32.032 0 0 0 323.456 96v334.048L150.208 258.176a31.968 31.968 0 1 0-45.056 45.44l209.984 208.32-210.784 224.704a32.032 32.032 0 0 0 46.688 43.808l172.416-183.84v360.896a32.064 32.064 0 0 0 32 32 31.936 31.936 0 0 0 23.232-9.984l220.224-232.192a32 32 0 0 0-0.672-44.736l-193.856-192.256z m-16.928-345.664l141.76 119.008-141.76 151.168V164.672z m0 712.608V583.68l143.488 142.336-143.488 151.264zM694.848 341.792a32 32 0 0 0-53.184 35.648 204.8 204.8 0 0 1 34.656 114.432 204.672 204.672 0 0 1-34.624 114.4 31.968 31.968 0 1 0 53.12 35.648 268.512 268.512 0 0 0 45.504-150.048 268.8 268.8 0 0 0-45.472-150.08zM886.528 326.432a441.536 441.536 0 0 0-41.152-77.024 32 32 0 1 0-53.184 35.616 379.648 379.648 0 0 1 64.16 211.744 380.512 380.512 0 0 1-64.16 211.744 32.032 32.032 0 0 0 53.184 35.648 443.328 443.328 0 0 0 74.976-247.36c0-58.88-11.392-116.192-33.824-170.368z";
+
+    -fx-opacity: 0.3;
+    -s-width: 17;
+    -s-height: 20;
+}
+
+.root > .top-bar > .left {
+    -fx-alignment: center;
+}
+
+.root > .top-bar > .left > .apple.svg {
+    -fx-shape: "M747.4 535.7c-0.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7z M642.3 230.7c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z";
+
+    -s-width: 17;
+    -s-height: 20;
+}
+
+/*endregion*/
+
+/*region window*/
+.window {
+    -mac-border-color: rgb(211, 185, 172);
+
+    -fx-background-color: -mac-border-color, rgb(247, 247, 247);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 10;
+    -fx-padding: 1;
+}
+
+.window > .title-bar {
+    -fx-background-color: derive(-mac-border-color, -10%), linear-gradient(to bottom, rgb(237, 228, 226), rgb(209, 207, 210));
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 1em;
+}
+
+.window > .title-bar > .tool-pane {
+    -fx-spacing: 10;
+    -fx-padding: 0 5 0 5;
+}
+
+.window > .title-bar > .title {
+    -fx-font-weight: BOLD;
+    -fx-font-size: 20;
+    -fx-padding: 0 0 0 25;
+}
+
+.window > .title-bar > .tool-pane > .button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.window > .title-bar > .tool-pane > .button Circle {
+    -fx-stroke: derive(-mac-border-color, -20%);
+    -fx-stroke-width: 1;
+}
+
+.window > .title-bar > .tool-pane > .button.close Circle {
+    -fx-fill: rgb(255, 91, 84);
+}
+
+.window > .title-bar > .tool-pane > .button.close Region {
+    -fx-shape: "M576 512l277.333333 277.333333-64 64-277.333333-277.333333L234.666667 853.333333 170.666667 789.333333l277.333333-277.333333L170.666667 234.666667 234.666667 170.666667l277.333333 277.333333L789.333333 170.666667 853.333333 234.666667 576 512z";
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-max-width: 9;
+    -fx-max-height: 9;
+}
+
+.window > .title-bar > .tool-pane > .button.minimize Circle {
+    -fx-fill: rgb(255, 185, 79);
+}
+
+.window > .title-bar > .tool-pane > .button.minimize Region {
+    -fx-shape: "M65.23884 456.152041 958.760137 456.152041l0 111.695918L65.23884 567.847959 65.23884 456.152041z";
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-max-width: 9;
+    -fx-max-height: 2;
+}
+
+.window > .title-bar > .tool-pane > .button.maximize Circle {
+    -fx-fill: rgb(208, 208, 208);
+}
+
+/*endregion*/
+
+/* region {setting-content} */
+.window > .container > .setting-content {
+
+    -fx-padding: 40;
+    -fx-alignment: center;
+
+    -fx-vgap: 1em;
+    -fx-hgap: 1em;
+
+    -fx-font-weight: bold;
+}
+
+.window > .container > .setting-content > .slider > .thumb {
+    -fx-background-color: linear-gradient(to bottom, transparent, #c9c9c9), white;
+    -fx-background-insets: 0, 1;
+    -fx-shape: 'M0,0 L20,0 20,10 10,20 0,10Z';
+    -fx-pref-width: 20;
+    -fx-pref-height: 25;
+}
+
+.window > .container > .setting-content > .slider > .track {
+    -fx-background-color: rgb(203, 202, 200);
+    -fx-pref-height: 3;
+}
+
+/* endregion */
+
+/* region {image-content} */
+.window > .container > .image-content {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.window > .container > .image-content > .image-container {
+    -fx-padding: 1;
+    -fx-border-color: -mac-border-color;
+}
+
+.window > .container > .image-content > .button {
+    -fx-background-color: -mac-border-color, rgb(238, 238, 238);
+    -fx-background-radius: 6;
+    -fx-background-insets: 0, 1;
+}
+
+.window > .container > .image-content > .button:hover {
+    -fx-background-color: -mac-border-color, rgb(248, 248, 248);
+}
+
+.window > .container > .image-content > .button:pressed {
+    -fx-background-color: -mac-border-color, rgb(59, 124, 254);
+    -fx-text-fill: white;
+}
+
+/* endregion */
+
+/* region {dock} */
+
+.root > .dock {
+    -fx-alignment: bottom-center;
+}
+
+.root > .dock > .tip > .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+.root > .dock > .tip > .border {
+    -fx-fill: rgb(237, 228, 226, 0.8);
+    -fx-stroke: rgb(182, 182, 182);
+    -fx-stroke-width: 1;
+}
+
+.root > .dock > .container {
+    -fx-alignment: bottom-center;
+    -fx-padding: 0 6 0 6;
+}
+
+.root > .dock > .container > .dock-item {
+    -fx-alignment: bottom-center;
+    -fx-cursor: hand;
+    -fx-padding: 15, 5, 5, 5;
+}
+
+.root > .dock > .container > .dock-item > .dot {
+    -fx-fill: rgb(0, 0, 0, 0.8);
+    -fx-translate-y: 10;
+    -fx-stroke: rgba(255, 255, 255, 0.4);
+    -fx-stroke-width: 1;
+}
+
+.root > .dock > .grass {
+    -fx-arc-width: 25;
+    -fx-arc-height: 25;
+}
+
+.root > .dock > .grass-border {
+    -fx-arc-width: 25;
+    -fx-arc-height: 25;
+
+    -fx-fill: rgb(255, 255, 255, 0.25);
+    -fx-stroke: white;
+    -fx-stroke-width: 1.5;
+}
+
+/* endregion */

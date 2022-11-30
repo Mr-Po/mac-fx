@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pomo</groupId>
+    <artifactId>mac-fx</artifactId>
+    <version>1.0</version>
+
+    <!--region 项目描述-->
+    <name>mac-fx</name>
+    <url>https://github.com/Mr-Po/mac-fx</url>
+    <description>use javafx to simulate macOS</description>
+    <inceptionYear>2022</inceptionYear>
+
+    <scm>
+        <url>https://github.com/Mr-Po/mac-fx</url>
+        <connection>scm:git:git@github.com:Mr-Po/mac-fx.git</connection>
+        <developerConnection>scm:git:git@github.com:Mr-Po/mac-fx.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Mr.Po</name>
+            <email>ldd_live@foxmail.com</email>
+        </developer>
+    </developers>
+    <!--endregion-->
+
+    <properties>
+        <jdk.version>8</jdk.version>
+        <project.encoding>UTF-8</project.encoding>
+
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
+
+        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+        <project.build.resourceEncoding>${project.encoding}</project.build.resourceEncoding>
+        <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+
+        <plugins>
+
+            <!--region 源文件添加许可证-->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>4.0.rc2</version>
+                <configuration>
+                    <licenseSets>
+                        <licenseSet>
+                            <header>com/mycila/maven/plugin/license/templates/GPL-3.txt</header>
+                            <excludes>
+                                <exclude>**/README</exclude>
+                                <exclude>**/pom.xml</exclude>
+                                <exclude>**/.lgtm.yml</exclude>
+                                <exclude>src/test/resources/**</exclude>
+                                <exclude>src/main/resources/**</exclude>
+                            </excludes>
+                        </licenseSet>
+                    </licenseSets>
+                    <properties>
+                        <owner>Mr.Po</owner>
+                        <email>ldd_live@foxmail.com</email>
+                    </properties>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>format</goal>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--endregion-->
+
+            <!--region 运行-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.pomo.macfx.MacOSApp</mainClass>
+                    <!--当仅存在守护线程时，退出-->
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+            <!--endregion-->
+        </plugins>
+    </build>
+</project>
